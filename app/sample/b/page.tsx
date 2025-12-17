@@ -202,8 +202,8 @@ export default function HomePage() {
                 </div>
                 <div className="absolute -bottom-6 -left-6 w-48 h-48 rounded-3xl overflow-hidden border-4 border-white shadow-xl">
                   <Image
-                    src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=80"
-                    alt="Traditional coffee"
+                    src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=400&q=80"
+                    alt="Ethiopian coffee beans"
                     fill
                     className="object-cover"
                   />
