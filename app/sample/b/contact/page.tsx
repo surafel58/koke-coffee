@@ -59,8 +59,8 @@ export default function ContactPage() {
                     Visit Our Coffee Shop
                   </h2>
                   <p className="text-[#5c4431]/70 mb-8">
-                    Step into our warm, art-filled space and experience the
-                    best of Ethiopian coffee culture.
+                    Step into our warm, art-filled space and experience the best
+                    of Ethiopian coffee culture.
                   </p>
                 </div>
 
@@ -70,9 +70,13 @@ export default function ContactPage() {
                       <MapPin className="w-6 h-6 text-[#5c4431]" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-[#5c4431] text-lg mb-1">Location</h3>
+                      <h3 className="font-bold text-[#5c4431] text-lg mb-1">
+                        Location
+                      </h3>
                       <p className="text-[#5c4431]/70">{siteConfig.location}</p>
-                      <p className="text-[#d79a1b] font-medium">{siteConfig.locationAmharic}</p>
+                      <p className="text-[#d79a1b] font-medium">
+                        {siteConfig.locationAmharic}
+                      </p>
                     </div>
                   </div>
 
@@ -81,7 +85,9 @@ export default function ContactPage() {
                       <Phone className="w-6 h-6 text-[#5c4431]" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-[#5c4431] text-lg mb-1">Phone</h3>
+                      <h3 className="font-bold text-[#5c4431] text-lg mb-1">
+                        Phone
+                      </h3>
                       <p className="text-[#5c4431]/70">{siteConfig.phone}</p>
                     </div>
                   </div>
@@ -91,7 +97,9 @@ export default function ContactPage() {
                       <Mail className="w-6 h-6 text-[#5c4431]" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-[#5c4431] text-lg mb-1">Email</h3>
+                      <h3 className="font-bold text-[#5c4431] text-lg mb-1">
+                        Email
+                      </h3>
                       <p className="text-[#5c4431]/70">{siteConfig.email}</p>
                     </div>
                   </div>
@@ -101,7 +109,9 @@ export default function ContactPage() {
                       <Clock className="w-6 h-6 text-[#5c4431]" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-[#5c4431] text-lg mb-1">Hours</h3>
+                      <h3 className="font-bold text-[#5c4431] text-lg mb-1">
+                        Hours
+                      </h3>
                       <p className="text-[#5c4431]/70">
                         Mon - Fri: {siteConfig.hours.weekdays}
                       </p>
@@ -114,14 +124,20 @@ export default function ContactPage() {
 
                 {/* Social */}
                 <div className="pt-4">
-                  <h3 className="font-semibold text-[#5c4431] mb-4">Follow Us</h3>
+                  <h3 className="font-semibold text-[#5c4431] mb-4">
+                    Follow Us
+                  </h3>
                   <a
                     href={siteConfig.social.tiktok}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#5c4431] text-[#F5E6D3] hover:bg-[#d79a1b] hover:text-[#5c4431] transition-colors"
                   >
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <svg
+                      className="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
                       <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
                     </svg>
                     @kokecoffee1
@@ -211,10 +227,10 @@ export default function ContactPage() {
           <FadeInView>
             <div className="rounded-3xl overflow-hidden h-[400px] bg-white shadow-sm">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.5!2d38.7!3d9.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMDAnMDAuMCJOIDM4wrA0MicwMC4wIkU!5e0!3m2!1sen!2set!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.1411996950706!2d38.7059543109045!3d8.959134291062318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b81003e38fb69%3A0xeb06370177179540!2sJemo%201!5e0!3m2!1sen!2sus!4v1765993651785!5m2!1sen!2sus"
                 width="100%"
                 height="100%"
-                style={{ border: 0 }}
+                style={{ border: 0, height: "100%" }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

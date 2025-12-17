@@ -207,10 +207,10 @@ export default function ContactPage() {
           <FadeInView>
             <div className="rounded-2xl overflow-hidden border border-[#faba21]/20 h-[400px] bg-[#1f1510]/30">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.5!2d38.7!3d9.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMDAnMDAuMCJOIDM4wrA0MicwMC4wIkU!5e0!3m2!1sen!2set!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.1411996950706!2d38.7059543109045!3d8.959134291062318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b81003e38fb69%3A0xeb06370177179540!2sJemo%201!5e0!3m2!1sen!2sus!4v1765993651785!5m2!1sen!2sus"
                 width="100%"
                 height="100%"
-                style={{ border: 0 }}
+                style={{ border: 0, height: "100%" }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
