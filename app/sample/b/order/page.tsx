@@ -77,14 +77,14 @@ export default function OrderPage() {
                     <div className="flex-1 min-w-0">
                       <div className="flex items-start justify-between gap-2">
                         <div>
-                          <h3 className="font-semibold text-[#5c4431] text-sm truncate">
+                          <h3 className="font-bold text-[#5c4431] text-base truncate">
                             {product.name}
                           </h3>
                           <span className="inline-block px-2 py-0.5 bg-[#d79a1b]/20 text-[#5c4431] text-xs rounded-full mt-1">
                             {product.category}
                           </span>
                         </div>
-                        <span className="text-[#d79a1b] font-bold text-sm whitespace-nowrap">
+                        <span className="text-[#d79a1b] font-bold text-base whitespace-nowrap">
                           {product.price} ETB
                         </span>
                       </div>
