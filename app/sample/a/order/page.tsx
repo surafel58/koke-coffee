@@ -32,7 +32,7 @@ export default function OrderPage() {
   };
 
   return (
-    <div className="bg-[#1A1A1A] min-h-screen">
+    <div className="bg-[#1A1A1A] min-h-screen w-full max-w-full">
       {/* Hero */}
       <section className="relative py-24">
         <div className="max-w-4xl mx-auto px-4 text-center">
@@ -54,8 +54,8 @@ export default function OrderPage() {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 pb-24">
-        <div className="grid lg:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-4 pb-24 w-full">
+        <div className="grid lg:grid-cols-3 gap-8 w-full">
           {/* Menu Items */}
           <div className="lg:col-span-2">
             <FadeInView>
@@ -63,11 +63,11 @@ export default function OrderPage() {
                 Select Items
               </h2>
             </FadeInView>
-            <StaggerContainer className="grid sm:grid-cols-2 gap-4">
+            <StaggerContainer className="grid sm:grid-cols-2 gap-4 w-full">
               {products.map((product) => (
                 <StaggerItem key={product.id}>
-                  <div className="flex gap-4 p-4 rounded-xl bg-[#1f1510]/50 hover:bg-[#1f1510]/70 transition-colors">
-                    <div className="relative w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
+                  <div className="flex gap-3 p-3 sm:p-4 rounded-xl bg-[#1f1510]/50 hover:bg-[#1f1510]/70 transition-colors w-full max-w-full">
+                    <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-lg overflow-hidden flex-shrink-0">
                       <Image
                         src={product.image}
                         alt={product.name}
@@ -75,18 +75,18 @@ export default function OrderPage() {
                         className="object-cover"
                       />
                     </div>
-                    <div className="flex-1 min-w-0">
+                    <div className="flex-1 min-w-0 overflow-hidden">
                       <div className="flex items-start justify-between gap-2">
-                        <div>
-                          <h3 className="font-bold text-[#F5E6D3] text-base truncate">
+                        <div className="min-w-0 flex-1">
+                          <h3 className="font-bold text-[#F5E6D3] text-sm sm:text-base truncate">
                             {product.name}
                           </h3>
                           <span className="inline-block mt-1 px-2 py-0.5 bg-[#faba21]/20 text-[#faba21] text-xs rounded-full">
                             {product.category}
                           </span>
                         </div>
-                        <span className="text-[#faba21] font-bold text-base whitespace-nowrap">
-                          {product.price} ETB
+                        <span className="text-[#faba21] font-bold text-sm sm:text-base whitespace-nowrap flex-shrink-0">
+                          {product.price}
                         </span>
                       </div>
                       <Button
@@ -120,53 +120,55 @@ export default function OrderPage() {
                     </p>
                   ) : (
                     <>
-                      <div className="space-y-4 max-h-[300px] overflow-y-auto pr-2">
+                      <div className="space-y-4 max-h-[300px] overflow-y-auto">
                         {items.map((item) => (
                           <div
                             key={item.id}
-                            className="flex items-center gap-3 pb-4 border-b border-[#faba21]/10"
+                            className="pb-4 border-b border-[#faba21]/10"
                           >
-                            <div className="relative w-12 h-12 rounded-lg overflow-hidden flex-shrink-0">
-                              <Image
-                                src={item.image}
-                                alt={item.name}
-                                fill
-                                className="object-cover"
-                              />
+                            <div className="flex items-center gap-3">
+                              <div className="relative w-12 h-12 rounded-lg overflow-hidden flex-shrink-0">
+                                <Image
+                                  src={item.image}
+                                  alt={item.name}
+                                  fill
+                                  className="object-cover"
+                                />
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                <h4 className="text-sm font-medium text-[#F5E6D3] truncate">
+                                  {item.name}
+                                </h4>
+                                <p className="text-[#faba21] text-sm">
+                                  {item.price} ETB
+                                </p>
+                              </div>
+                              <button
+                                onClick={() => removeItem(item.id)}
+                                className="w-7 h-7 rounded-full text-red-400 flex items-center justify-center hover:bg-red-400/10 transition-colors flex-shrink-0"
+                              >
+                                <Trash2 className="w-3 h-3" />
+                              </button>
                             </div>
-                            <div className="flex-1 min-w-0">
-                              <h4 className="text-sm font-medium text-[#F5E6D3] truncate">
-                                {item.name}
-                              </h4>
-                              <p className="text-[#faba21] text-sm">
-                                {item.price} ETB
-                              </p>
-                            </div>
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center justify-end gap-2 mt-2">
                               <button
                                 onClick={() =>
                                   updateQuantity(item.id, item.quantity - 1)
                                 }
-                                className="w-7 h-7 rounded-full bg-[#1A1A1A] text-[#F5E6D3] flex items-center justify-center hover:bg-[#faba21] hover:text-[#1A1A1A] transition-colors"
+                                className="w-8 h-8 rounded-full bg-[#1A1A1A] text-[#F5E6D3] flex items-center justify-center hover:bg-[#faba21] hover:text-[#1A1A1A] transition-colors"
                               >
                                 <Minus className="w-3 h-3" />
                               </button>
-                              <span className="text-[#F5E6D3] w-6 text-center">
+                              <span className="text-[#F5E6D3] w-8 text-center font-medium">
                                 {item.quantity}
                               </span>
                               <button
                                 onClick={() =>
                                   updateQuantity(item.id, item.quantity + 1)
                                 }
-                                className="w-7 h-7 rounded-full bg-[#1A1A1A] text-[#F5E6D3] flex items-center justify-center hover:bg-[#faba21] hover:text-[#1A1A1A] transition-colors"
+                                className="w-8 h-8 rounded-full bg-[#1A1A1A] text-[#F5E6D3] flex items-center justify-center hover:bg-[#faba21] hover:text-[#1A1A1A] transition-colors"
                               >
                                 <Plus className="w-3 h-3" />
-                              </button>
-                              <button
-                                onClick={() => removeItem(item.id)}
-                                className="w-7 h-7 rounded-full text-red-400 flex items-center justify-center hover:bg-red-400/10 transition-colors ml-1"
-                              >
-                                <Trash2 className="w-3 h-3" />
                               </button>
                             </div>
                           </div>

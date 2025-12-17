@@ -31,7 +31,7 @@ export default function OrderPage() {
   };
 
   return (
-    <div className="bg-[#F5E6D3] min-h-screen">
+    <div className="bg-[#F5E6D3] min-h-screen w-full max-w-full">
       {/* Hero */}
       <section className="relative py-24 bg-[#5c4431]">
         <div className="max-w-4xl mx-auto px-4 text-center">
@@ -53,8 +53,8 @@ export default function OrderPage() {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid lg:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-4 py-16 w-full">
+        <div className="grid lg:grid-cols-3 gap-8 w-full">
           {/* Menu Items */}
           <div className="lg:col-span-2">
             <FadeInView>
@@ -62,11 +62,11 @@ export default function OrderPage() {
                 Select Your Items
               </h2>
             </FadeInView>
-            <StaggerContainer className="grid sm:grid-cols-2 gap-4">
+            <StaggerContainer className="grid sm:grid-cols-2 gap-4 w-full">
               {products.map((product) => (
                 <StaggerItem key={product.id}>
-                  <div className="flex gap-4 p-4 rounded-2xl bg-white hover:shadow-lg transition-shadow">
-                    <div className="relative w-20 h-20 rounded-xl overflow-hidden flex-shrink-0">
+                  <div className="flex gap-3 p-3 sm:p-4 rounded-2xl bg-white hover:shadow-lg transition-shadow w-full max-w-full">
+                    <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden flex-shrink-0">
                       <Image
                         src={product.image}
                         alt={product.name}
@@ -74,18 +74,18 @@ export default function OrderPage() {
                         className="object-cover"
                       />
                     </div>
-                    <div className="flex-1 min-w-0">
+                    <div className="flex-1 min-w-0 overflow-hidden">
                       <div className="flex items-start justify-between gap-2">
-                        <div>
-                          <h3 className="font-bold text-[#5c4431] text-base truncate">
+                        <div className="min-w-0 flex-1">
+                          <h3 className="font-bold text-[#5c4431] text-sm sm:text-base truncate">
                             {product.name}
                           </h3>
                           <span className="inline-block px-2 py-0.5 bg-[#d79a1b]/20 text-[#5c4431] text-xs rounded-full mt-1">
                             {product.category}
                           </span>
                         </div>
-                        <span className="text-[#d79a1b] font-bold text-base whitespace-nowrap">
-                          {product.price} ETB
+                        <span className="text-[#d79a1b] font-bold text-sm sm:text-base whitespace-nowrap flex-shrink-0">
+                          {product.price}
                         </span>
                       </div>
                       <Button
@@ -121,53 +121,55 @@ export default function OrderPage() {
                     </p>
                   ) : (
                     <>
-                      <div className="space-y-4 max-h-[300px] overflow-y-auto pr-2">
+                      <div className="space-y-4 max-h-[300px] overflow-y-auto">
                         {items.map((item) => (
                           <div
                             key={item.id}
-                            className="flex items-center gap-3 pb-4 border-b border-[#5c4431]/10"
+                            className="pb-4 border-b border-[#5c4431]/10"
                           >
-                            <div className="relative w-12 h-12 rounded-xl overflow-hidden flex-shrink-0">
-                              <Image
-                                src={item.image}
-                                alt={item.name}
-                                fill
-                                className="object-cover"
-                              />
+                            <div className="flex items-center gap-3">
+                              <div className="relative w-12 h-12 rounded-xl overflow-hidden flex-shrink-0">
+                                <Image
+                                  src={item.image}
+                                  alt={item.name}
+                                  fill
+                                  className="object-cover"
+                                />
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                <h4 className="text-sm font-medium text-[#5c4431] truncate">
+                                  {item.name}
+                                </h4>
+                                <p className="text-[#d79a1b] text-sm font-medium">
+                                  {item.price} ETB
+                                </p>
+                              </div>
+                              <button
+                                onClick={() => removeItem(item.id)}
+                                className="w-7 h-7 rounded-full text-red-500 flex items-center justify-center hover:bg-red-50 transition-colors flex-shrink-0"
+                              >
+                                <Trash2 className="w-3 h-3" />
+                              </button>
                             </div>
-                            <div className="flex-1 min-w-0">
-                              <h4 className="text-sm font-medium text-[#5c4431] truncate">
-                                {item.name}
-                              </h4>
-                              <p className="text-[#d79a1b] text-sm font-medium">
-                                {item.price} ETB
-                              </p>
-                            </div>
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center justify-end gap-2 mt-2">
                               <button
                                 onClick={() =>
                                   updateQuantity(item.id, item.quantity - 1)
                                 }
-                                className="w-7 h-7 rounded-full bg-[#F5E6D3] text-[#5c4431] flex items-center justify-center hover:bg-[#d79a1b] transition-colors"
+                                className="w-8 h-8 rounded-full bg-[#F5E6D3] text-[#5c4431] flex items-center justify-center hover:bg-[#d79a1b] transition-colors"
                               >
                                 <Minus className="w-3 h-3" />
                               </button>
-                              <span className="text-[#5c4431] w-6 text-center font-medium">
+                              <span className="text-[#5c4431] w-8 text-center font-medium">
                                 {item.quantity}
                               </span>
                               <button
                                 onClick={() =>
                                   updateQuantity(item.id, item.quantity + 1)
                                 }
-                                className="w-7 h-7 rounded-full bg-[#F5E6D3] text-[#5c4431] flex items-center justify-center hover:bg-[#d79a1b] transition-colors"
+                                className="w-8 h-8 rounded-full bg-[#F5E6D3] text-[#5c4431] flex items-center justify-center hover:bg-[#d79a1b] transition-colors"
                               >
                                 <Plus className="w-3 h-3" />
-                              </button>
-                              <button
-                                onClick={() => removeItem(item.id)}
-                                className="w-7 h-7 rounded-full text-red-500 flex items-center justify-center hover:bg-red-50 transition-colors ml-1"
-                              >
-                                <Trash2 className="w-3 h-3" />
                               </button>
                             </div>
                           </div>
