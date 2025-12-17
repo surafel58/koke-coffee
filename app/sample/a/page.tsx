@@ -13,18 +13,18 @@ const featuredProducts = products.slice(0, 4);
 const features = [
   {
     icon: Coffee,
-    title: "Premium Ethiopian Beans",
-    description: "Sourced from the highlands where coffee was born",
+    title: "Single-Origin Excellence",
+    description: "Premium beans from Ethiopia's finest highland regions",
   },
   {
     icon: Leaf,
-    title: "Traditional Methods",
-    description: "Authentic jebena coffee ceremony experience",
+    title: "The Ceremony Reimagined",
+    description: "Ancient rituals refined for the modern connoisseur",
   },
   {
     icon: Heart,
-    title: "Crafted with Love",
-    description: "Every cup tells a story of African heritage",
+    title: "Designed Experience",
+    description: "Where minimalist aesthetics meet rich tradition",
   },
 ];
 
@@ -191,15 +191,15 @@ export default function HomePage() {
               Visit Us Today
             </h2>
             <p className="text-xl text-[#F5E6D3]/70 mb-8">
-              Experience the art of Ethiopian coffee in our stunning gallery-style space
+              Experience the art of Ethiopian coffee in our stunning minimalist space
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/sample/a/contact">
                 <Button size="lg">Find Our Location</Button>
               </Link>
-              <Link href="/sample/a/gallery">
+              <Link href="/sample/a/about">
                 <Button size="lg" variant="outline">
-                  View Gallery
+                  Our Story
                 </Button>
               </Link>
             </div>

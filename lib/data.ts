@@ -175,8 +175,8 @@ export const products: Product[] = [
 
 export const siteConfig = {
   name: "Koke Coffee",
-  tagline: "Where African Heritage Meets Coffee Excellence",
-  description: "Experience the finest Ethiopian coffee in a stunning art-filled atmosphere. Located in the heart of Jemo-1, Addis Ababa.",
+  tagline: "Timeless Roots. Contemporary Brews.",
+  description: "A refined Ethiopian coffee experience in a modern, art-filled sanctuary. Where ceremony meets contemporary design.",
   location: "Jemo-1, Addis Ababa, Ethiopia",
   locationAmharic: "ጀሞ 1 / 1ኛ በር ከሩት ህንፃ ጀርባ",
   phone: "+251970777222",
@@ -191,42 +191,3 @@ export const siteConfig = {
     facebook: "#",
   },
 };
-
-export const galleryImages = [
-  {
-    id: 1,
-    src: "/koke_coffee_interior.png",
-    alt: "Koke Coffee Interior",
-    category: "interior",
-  },
-  {
-    id: 2,
-    src: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80",
-    alt: "Fresh brewed coffee",
-    category: "coffee",
-  },
-  {
-    id: 3,
-    src: "https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&q=80",
-    alt: "Premium coffee beans",
-    category: "coffee",
-  },
-  {
-    id: 4,
-    src: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=80",
-    alt: "Signature latte",
-    category: "coffee",
-  },
-  {
-    id: 5,
-    src: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=800&q=80",
-    alt: "Cappuccino art",
-    category: "coffee",
-  },
-  {
-    id: 6,
-    src: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=800&q=80",
-    alt: "Traditional brewing",
-    category: "coffee",
-  },
-];

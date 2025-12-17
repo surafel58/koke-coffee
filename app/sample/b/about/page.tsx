@@ -14,24 +14,24 @@ const stats = [
 
 const values = [
   {
-    title: "Heritage",
+    title: "Intention",
     description:
-      "We celebrate Ethiopian coffee culture, bringing the authentic jebena ceremony experience to our modern space.",
+      "Every element is deliberate—from bean selection to interior design. Nothing is accidental.",
   },
   {
-    title: "Quality",
+    title: "Refinement",
     description:
-      "Only the finest beans from Ethiopian highlands make it into your cup, roasted to perfection.",
+      "We elevate the coffee experience through meticulous attention to craft and presentation.",
   },
   {
-    title: "Community",
+    title: "Presence",
     description:
-      "More than a coffee shop, we're a gathering place where art, culture, and conversation flourish.",
+      "Our space invites you to slow down. Coffee is not consumed here—it's experienced.",
   },
   {
-    title: "Art",
+    title: "Roots",
     description:
-      "Our stunning murals and gallery-style interior create an immersive African art experience.",
+      "Ethiopian coffee tradition is our foundation. We honor it by reimagining it for today.",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function AboutPage() {
               About Koke Coffee
             </h1>
             <p className="text-[#F5E6D3]/80 text-lg max-w-2xl mx-auto">
-              Where African heritage meets modern coffee culture
+              Modern Afro-Minimalism. Timeless Ethiopian Tradition.
             </p>
           </motion.div>
         </div>
@@ -85,25 +85,24 @@ export default function AboutPage() {
             </FadeInView>
 
             <FadeInView delay={0.2}>
-              <span className="text-[#d79a1b] font-medium">Our Journey</span>
+              <span className="text-[#d79a1b] font-medium">Our Philosophy</span>
               <h2 className="text-3xl md:text-4xl font-bold text-[#5c4431] mt-2 mb-6">
-                Born from a Love of Ethiopian Coffee
+                Clean Luxury. Rooted in Tradition.
               </h2>
               <div className="space-y-4 text-[#5c4431]/70">
                 <p>
-                  Koke Coffee was born from a deep passion for Ethiopian coffee culture
-                  and a vision to create a space where art, heritage, and exceptional
-                  coffee come together.
+                  Koke Coffee exists at the intersection of heritage and contemporary
+                  design. We've created a sanctuary where the ancient Ethiopian coffee
+                  ritual meets minimalist aesthetics.
                 </p>
                 <p>
-                  Located in Jemo-1, our coffee shop is adorned with stunning African
-                  murals that celebrate our rich cultural heritage. Every corner tells
-                  a story, every cup holds tradition.
+                  Our Jemo-1 location features curated murals and intentional spaces—
+                  not busy or rustic, but refined and purposeful. This is coffee
+                  elevated to an experience.
                 </p>
                 <p>
-                  We source our beans directly from Ethiopian highlands, ensuring that
-                  each sip transports you to the birthplace of coffee. Our traditional
-                  jebena ceremony brings authenticity to every visit.
+                  Single-origin beans. Deliberate preparation. An atmosphere designed
+                  for those who understand that the best things require presence.
                 </p>
               </div>
             </FadeInView>

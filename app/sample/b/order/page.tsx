@@ -44,7 +44,7 @@ export default function OrderPage() {
               Quick & Easy
             </span>
             <h1 className="text-4xl md:text-6xl font-bold text-[#F5E6D3] mb-4">
-              Order Online
+              Order
             </h1>
             <p className="text-[#F5E6D3]/80 text-lg max-w-2xl mx-auto">
               Pick your favorites and we'll have them ready for you

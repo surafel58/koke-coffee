@@ -2,169 +2,121 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Coffee, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const samples = [
   {
     id: "a",
     name: "Dark Luxury",
-    description:
-      "Gallery-style, sophisticated design with deep black backgrounds and rich gold accents. Perfect for a premium, art-focused coffee experience.",
+    description: "Minimalist sophistication with refined gold accents",
     colors: {
       primary: "#1A1A1A",
       secondary: "#D4A853",
-      text: "#F5E6D3",
+      accent: "#2C1810",
     },
-    features: ["Elegant serif typography", "Gallery-like atmosphere", "High-end feel"],
   },
   {
     id: "b",
-    name: "Warm & Earthy",
-    description:
-      "Cozy, inviting design with warm amber and cream tones. Captures the traditional Ethiopian coffee house atmosphere.",
+    name: "Warm & Refined",
+    description: "Elevated warmth honoring Ethiopian tradition",
     colors: {
-      primary: "#E8A54B",
-      secondary: "#5C4033",
-      text: "#1A1A1A",
+      primary: "#F5E6D3",
+      secondary: "#d79a1b",
+      accent: "#5c4431",
     },
-    features: ["Friendly typography", "Welcoming atmosphere", "Rustic-modern feel"],
   },
 ];
 
 export default function SamplesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#1A1A1A] to-[#2C1810]">
+    <div className="min-h-screen bg-[#1A1A1A] flex flex-col items-center justify-center px-4 py-16">
       {/* Header */}
-      <motion.header
+      <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="pt-16 pb-8 text-center"
+        className="text-center mb-16"
       >
-        <div className="flex items-center justify-center gap-3 mb-4">
-          <Coffee className="w-10 h-10 text-[#D4A853]" />
-          <h1 className="text-4xl md:text-5xl font-bold text-[#F5E6D3]">
-            Koke Coffee
-          </h1>
-        </div>
-        <p className="text-[#D4A853] text-lg max-w-xl mx-auto px-4">
-          Where African Heritage Meets Coffee Excellence
+        <h1 className="text-4xl md:text-5xl font-bold text-[#F5E6D3] mb-3 tracking-tight">
+          Koke Coffee
+        </h1>
+        <p className="text-[#D4A853] text-lg">
+          Select a design style
         </p>
-      </motion.header>
+      </motion.div>
 
-      {/* Sample Selection */}
-      <div className="max-w-6xl mx-auto px-4 pb-20">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-2xl md:text-3xl font-semibold text-[#F5E6D3] mb-3">
-            Choose Your Design Sample
-          </h2>
-          <p className="text-[#F5E6D3]/70 text-lg">
-            Select a design style to preview the full website experience
-          </p>
-        </motion.div>
+      {/* Sample Cards */}
+      <div className="grid md:grid-cols-2 gap-6 max-w-3xl w-full">
+        {samples.map((sample, index) => (
+          <motion.div
+            key={sample.id}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 + index * 0.1, duration: 0.5 }}
+          >
+            <Link href={`/sample/${sample.id}`} className="block group">
+              <div
+                className="relative overflow-hidden rounded-xl p-6 transition-all duration-300 hover:scale-[1.02]"
+                style={{ backgroundColor: sample.colors.primary }}
+              >
+                {/* Color accent bar */}
+                <div
+                  className="absolute top-0 left-0 right-0 h-1"
+                  style={{ backgroundColor: sample.colors.secondary }}
+                />
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {samples.map((sample, index) => (
-            <motion.div
-              key={sample.id}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 + index * 0.2, duration: 0.6 }}
-            >
-              <Link href={`/sample/${sample.id}`} className="block group">
-                <div className="relative overflow-hidden rounded-2xl border border-[#D4A853]/30 bg-[#1A1A1A]/50 backdrop-blur-sm transition-all duration-300 hover:border-[#D4A853] hover:shadow-[0_0_30px_rgba(212,168,83,0.2)]">
-                  {/* Color Preview */}
-                  <div
-                    className="h-48 relative"
-                    style={{ backgroundColor: sample.colors.primary }}
-                  >
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center">
-                        <div
-                          className="w-20 h-20 rounded-full mx-auto mb-3 flex items-center justify-center"
-                          style={{ backgroundColor: sample.colors.secondary }}
-                        >
-                          <Sparkles
-                            className="w-8 h-8"
-                            style={{ color: sample.colors.text }}
-                          />
-                        </div>
-                        <span
-                          className="text-2xl font-bold"
-                          style={{ color: sample.colors.secondary }}
-                        >
-                          Sample {sample.id.toUpperCase()}
-                        </span>
-                      </div>
-                    </div>
-                    {/* Gradient overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#1A1A1A] to-transparent" />
-                  </div>
-
-                  {/* Content */}
-                  <div className="p-6">
-                    <h3 className="text-2xl font-bold text-[#D4A853] mb-2 group-hover:text-[#E8A54B] transition-colors">
+                {/* Content */}
+                <div className="pt-4">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3
+                      className="text-xl font-semibold"
+                      style={{ color: sample.colors.secondary }}
+                    >
                       {sample.name}
                     </h3>
-                    <p className="text-[#F5E6D3]/80 text-base mb-4">
-                      {sample.description}
-                    </p>
-
-                    {/* Features */}
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {sample.features.map((feature) => (
-                        <span
-                          key={feature}
-                          className="text-sm px-3 py-1.5 rounded-full bg-[#D4A853]/10 text-[#D4A853] border border-[#D4A853]/30"
-                        >
-                          {feature}
-                        </span>
-                      ))}
-                    </div>
-
-                    {/* CTA */}
-                    <div className="flex items-center justify-between">
-                      <span className="text-base text-[#F5E6D3]/50">
-                        Click to preview
-                      </span>
-                      <div className="w-10 h-10 rounded-full bg-[#D4A853] flex items-center justify-center group-hover:bg-[#E8A54B] transition-colors">
-                        <svg
-                          className="w-5 h-5 text-[#1A1A1A] transform group-hover:translate-x-1 transition-transform"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 5l7 7-7 7"
-                          />
-                        </svg>
-                      </div>
-                    </div>
+                    <ArrowRight
+                      className="w-5 h-5 opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all"
+                      style={{ color: sample.colors.secondary }}
+                    />
                   </div>
+                  <p
+                    className="text-sm opacity-70"
+                    style={{ color: sample.colors.accent }}
+                  >
+                    {sample.description}
+                  </p>
                 </div>
-              </Link>
-            </motion.div>
-          ))}
-        </div>
 
-        {/* Footer note */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.6 }}
-          className="text-center text-[#F5E6D3]/50 text-base mt-12"
-        >
-          Each sample includes: Home, Menu, About, Contact, Gallery & Order Online pages
-        </motion.p>
+                {/* Color swatches */}
+                <div className="flex gap-2 mt-6">
+                  <div
+                    className="w-6 h-6 rounded-full border border-white/20"
+                    style={{ backgroundColor: sample.colors.primary }}
+                  />
+                  <div
+                    className="w-6 h-6 rounded-full"
+                    style={{ backgroundColor: sample.colors.secondary }}
+                  />
+                  <div
+                    className="w-6 h-6 rounded-full"
+                    style={{ backgroundColor: sample.colors.accent }}
+                  />
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+        ))}
       </div>
+
+      {/* Footer */}
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.6, duration: 0.5 }}
+        className="text-[#F5E6D3]/40 text-sm mt-12"
+      >
+        Each includes Home, Menu, About, Contact & Order
+      </motion.p>
     </div>
   );
 }

@@ -10,9 +10,8 @@ const navLinks = [
   { href: "/sample/a", label: "Home" },
   { href: "/sample/a/menu", label: "Menu" },
   { href: "/sample/a/about", label: "About" },
-  { href: "/sample/a/gallery", label: "Gallery" },
   { href: "/sample/a/contact", label: "Contact" },
-  { href: "/sample/a/order", label: "Order Online" },
+  { href: "/sample/a/order", label: "Order" },
 ];
 
 export default function Navbar() {

@@ -13,18 +13,18 @@ const featuredProducts = products.slice(0, 4);
 const features = [
   {
     icon: Coffee,
-    title: "Premium Ethiopian Beans",
-    description: "Sourced from the highlands where coffee was born",
+    title: "Single-Origin Excellence",
+    description: "Premium beans from Ethiopia's finest highland regions",
   },
   {
     icon: Leaf,
-    title: "Traditional Methods",
-    description: "Authentic jebena coffee ceremony experience",
+    title: "The Ceremony Reimagined",
+    description: "Ancient rituals refined for the modern connoisseur",
   },
   {
     icon: Heart,
-    title: "Crafted with Love",
-    description: "Every cup tells a story of African heritage",
+    title: "Designed Experience",
+    description: "Where minimalist aesthetics meet rich tradition",
   },
 ];
 
@@ -55,8 +55,8 @@ export default function HomePage() {
                 Welcome to Koke Coffee
               </span>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-[#F5E6D3] mb-6 leading-tight">
-                Where Coffee Meets{" "}
-                <span className="text-[#d79a1b]">African Soul</span>
+                The Art of{" "}
+                <span className="text-[#d79a1b]">Ethiopian Coffee</span>
               </h1>
               <p className="text-xl text-[#F5E6D3]/80 mb-10">
                 {siteConfig.tagline}
@@ -169,19 +169,18 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeInView className="order-2 lg:order-1">
-              <span className="text-[#d79a1b] font-medium">Our Story</span>
+              <span className="text-[#d79a1b] font-medium">Our Philosophy</span>
               <h2 className="text-3xl md:text-4xl font-bold text-[#5c4431] mt-2 mb-6">
-                A Taste of Ethiopian Heritage
+                Modern Afro-Minimalism
               </h2>
               <p className="text-[#5c4431]/70 mb-6 leading-relaxed">
-                Located in the heart of Jemo-1, Koke Coffee brings you the authentic
-                taste of Ethiopia. Our space is adorned with stunning African murals,
-                creating an immersive cultural experience with every visit.
+                Koke Coffee is where centuries-old Ethiopian coffee tradition meets
+                contemporary design. Our curated space features striking murals and
+                clean lines—a sanctuary for those who appreciate refined simplicity.
               </p>
               <p className="text-[#5c4431]/70 mb-8 leading-relaxed">
-                We source our beans directly from Ethiopian highlands and honor
-                traditional brewing methods to deliver coffee the way it was meant
-                to be enjoyed.
+                Every cup is a ritual. Single-origin beans from Ethiopia's highlands,
+                prepared with intention, served in an atmosphere designed for presence.
               </p>
               <Link href="/sample/b/about">
                 <Button className="bg-[#d79a1b] text-[#5c4431] hover:bg-[#faba21]">
