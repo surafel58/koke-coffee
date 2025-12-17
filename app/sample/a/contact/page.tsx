@@ -71,7 +71,7 @@ export default function ContactPage() {
                       <MapPin className="w-6 h-6 text-[#faba21]" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-[#F5E6D3] mb-1">Location</h3>
+                      <h3 className="font-bold text-[#F5E6D3] text-lg mb-1">Location</h3>
                       <p className="text-[#F5E6D3]/60">{siteConfig.location}</p>
                       <p className="text-[#faba21] font-medium">{siteConfig.locationAmharic}</p>
                     </div>
@@ -82,7 +82,7 @@ export default function ContactPage() {
                       <Phone className="w-6 h-6 text-[#faba21]" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-[#F5E6D3] mb-1">Phone</h3>
+                      <h3 className="font-bold text-[#F5E6D3] text-lg mb-1">Phone</h3>
                       <p className="text-[#F5E6D3]/60">{siteConfig.phone}</p>
                     </div>
                   </div>
@@ -92,7 +92,7 @@ export default function ContactPage() {
                       <Mail className="w-6 h-6 text-[#faba21]" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-[#F5E6D3] mb-1">Email</h3>
+                      <h3 className="font-bold text-[#F5E6D3] text-lg mb-1">Email</h3>
                       <p className="text-[#F5E6D3]/60">{siteConfig.email}</p>
                     </div>
                   </div>
@@ -102,7 +102,7 @@ export default function ContactPage() {
                       <Clock className="w-6 h-6 text-[#faba21]" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-[#F5E6D3] mb-1">Hours</h3>
+                      <h3 className="font-bold text-[#F5E6D3] text-lg mb-1">Hours</h3>
                       <p className="text-[#F5E6D3]/60">
                         Mon - Fri: {siteConfig.hours.weekdays}
                       </p>

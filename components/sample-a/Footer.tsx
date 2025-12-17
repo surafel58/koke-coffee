@@ -22,7 +22,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-[#faba21] font-bold text-lg mb-4">
+            <h4 className="text-[#faba21] font-extrabold text-xl mb-5">
               Quick Links
             </h4>
             <ul className="space-y-3">
@@ -46,7 +46,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-[#faba21] font-bold text-lg mb-4">
+            <h4 className="text-[#faba21] font-extrabold text-xl mb-5">
               Contact Us
             </h4>
             <ul className="space-y-3">
@@ -70,7 +70,7 @@ export default function Footer() {
 
           {/* Hours */}
           <div>
-            <h4 className="text-[#faba21] font-bold text-lg mb-4">
+            <h4 className="text-[#faba21] font-extrabold text-xl mb-5">
               Opening Hours
             </h4>
             <ul className="space-y-3">

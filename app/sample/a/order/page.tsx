@@ -81,9 +81,9 @@ export default function OrderPage() {
                           <h3 className="font-semibold text-[#F5E6D3] text-sm truncate">
                             {product.name}
                           </h3>
-                          <Badge variant="outline" className="mt-1 text-xs">
+                          <span className="inline-block mt-1 px-2 py-0.5 bg-[#faba21]/20 text-[#faba21] text-xs rounded-full">
                             {product.category}
-                          </Badge>
+                          </span>
                         </div>
                         <span className="text-[#faba21] font-bold text-sm whitespace-nowrap">
                           {product.price} ETB
