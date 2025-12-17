@@ -13,6 +13,7 @@ const samples = [
       primary: "#1A1A1A",
       secondary: "#D4A853",
       accent: "#2C1810",
+      text: "#F5E6D3",
     },
   },
   {
@@ -23,6 +24,7 @@ const samples = [
       primary: "#F5E6D3",
       secondary: "#d79a1b",
       accent: "#5c4431",
+      text: "#5c4431",
     },
   },
 ];
@@ -81,7 +83,7 @@ export default function SamplesPage() {
                   </div>
                   <p
                     className="text-sm opacity-70"
-                    style={{ color: sample.colors.accent }}
+                    style={{ color: sample.colors.text }}
                   >
                     {sample.description}
                   </p>
